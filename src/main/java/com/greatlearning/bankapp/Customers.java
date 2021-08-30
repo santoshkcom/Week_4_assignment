@@ -1,9 +1,6 @@
 package com.greatlearning.bankapp;
 
 import com.greatlearning.bankapp.helpers.FileWriterHelper;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.text.MessageFormat;
 import java.util.Scanner;
@@ -13,18 +10,42 @@ import static com.greatlearning.bankapp.constants.GlobalConstants.WITHDRAWAL;
 
 /**
  * Customers to store customer information
- * using lombok for getter, setter and ArgsConstructor
  */
-@AllArgsConstructor
+
 public class Customers {
-    @Getter
-    @Setter
+
+    public Customers(int bankAccountNo, String password, double balance) {
+        this.bankAccountNo = bankAccountNo;
+        this.password = password;
+        this.balance = balance;
+    }
+
+    public int getBankAccountNo() {
+        return bankAccountNo;
+    }
+
+    public void setBankAccountNo(int bankAccountNo) {
+        this.bankAccountNo = bankAccountNo;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     private int bankAccountNo;
-    @Getter
-    @Setter
     private String password;
-    @Getter
-    @Setter
     private double balance;
 
     /**
